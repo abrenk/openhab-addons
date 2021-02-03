@@ -136,6 +136,10 @@ import org.openhab.binding.enocean.internal.eep.D2_01.D2_01_12_NodON;
 import org.openhab.binding.enocean.internal.eep.D2_03.D2_03_0A;
 import org.openhab.binding.enocean.internal.eep.D2_05.D2_05_00;
 import org.openhab.binding.enocean.internal.eep.D2_14.D2_14_30;
+import org.openhab.binding.enocean.internal.eep.D2_50.D2_50_00;
+import org.openhab.binding.enocean.internal.eep.D2_50.D2_50_01;
+import org.openhab.binding.enocean.internal.eep.D2_50.D2_50_10;
+import org.openhab.binding.enocean.internal.eep.D2_50.D2_50_11;
 import org.openhab.binding.enocean.internal.eep.D5_00.D5_00_01;
 import org.openhab.binding.enocean.internal.eep.F6_01.F6_01_01;
 import org.openhab.binding.enocean.internal.eep.F6_02.F6_02_01;
@@ -457,7 +461,17 @@ public enum EEPType {
     MultiFunctionSensor_30(RORG.VLD, 0x14, 0x30, false, D2_14_30.class, THING_TYPE_MULTFUNCTIONSMOKEDETECTOR,
             CHANNEL_SMOKEDETECTION, CHANNEL_SENSORFAULT, CHANNEL_TIMESINCELASTMAINTENANCE, CHANNEL_BATTERY_LEVEL,
             CHANNEL_REMAININGPLT, CHANNEL_TEMPERATURE, CHANNEL_HUMIDITY, CHANNEL_HYGROCOMFORTINDEX,
-            CHANNEL_INDOORAIRANALYSIS);
+            CHANNEL_INDOORAIRANALYSIS),
+
+    // TODO refresh: true
+    HeatRecoveryVentilation_00(RORG.VLD, 0x50, 0x00, false, D2_50_00.class, THING_TYPE_HEATRECOVERYVENTILATION,
+            CHANNELS_HEATRECOVERYVENTILATION),
+    HeatRecoveryVentilation_01(RORG.VLD, 0x50, 0x01, false, D2_50_01.class, THING_TYPE_HEATRECOVERYVENTILATION,
+            CHANNELS_HEATRECOVERYVENTILATION),
+    HeatRecoveryVentilation_10(RORG.VLD, 0x50, 0x10, false, D2_50_10.class, THING_TYPE_HEATRECOVERYVENTILATION,
+            CHANNELS_HEATRECOVERYVENTILATION),
+    HeatRecoveryVentilation_11(RORG.VLD, 0x50, 0x11, false, D2_50_11.class, THING_TYPE_HEATRECOVERYVENTILATION,
+            CHANNELS_HEATRECOVERYVENTILATION);
 
     private RORG rorg;
     private int func;
