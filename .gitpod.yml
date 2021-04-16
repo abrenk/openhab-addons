@@ -3,3 +3,14 @@ image:
 
 tasks:
   - init: mvn install -DskipTests=false
+
+# see https://www.openhab.org/docs/developer/ide/vscode.html
+vscode:
+  extensions:
+#    - vscjava.vscode-java-pack@0.13.0
+    - redhat.java@0.77.0
+    - vscjava.vscode-java-debug@0.32.1
+    - vscjava.vscode-java-test@0.28.1
+    - vscjava.vscode-maven@0.29.0
+    - vscjava.vscode-java-dependency@0.18.3
+#    - VisualStudioExptTeam.vscodeintellicode@1.2.12
